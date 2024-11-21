@@ -1,0 +1,399 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('Kablammo-Regular.ttf') format('truetype');
+    font-weight: normal;  
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'NormalFont';
+    src: url('Regular.ttf') format('truetype');
+    font-weight: normal;  
+    font-style: normal;
+}
+
+
+body {
+    font-family: 'MyCustomFont', Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+}
+
+header {
+    background: black;
+    color: #fff;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 2em; 
+}
+
+nav .logo {
+    width: 150px;
+    height: auto;
+}
+
+.nav-title {
+    font-size: 1.8em;
+    margin: 0;
+}
+
+.nav-title:hover {
+    color: rgb(249, 174, 35);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2em; 
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 0.5em 1em; 
+    transition: color 0.3s, border-bottom 0.3s;
+}
+
+nav a:hover {
+    color: rgb(249, 174, 35);
+    border-bottom: 2px solid rgb(249, 174, 35); 
+}
+
+main {
+    flex: 1; 
+    display: flex;
+    padding: 20px;
+    flex-wrap: wrap; 
+}
+
+p{
+    font-family: 'NormalFont', Arial, sans-serif;
+}
+
+article {
+    flex: 3;
+    padding-right: 20px;
+}
+
+article h1 {
+    font-size: 2em;
+    color: #333;
+    font-family: 'NormalFont', Arial, sans-serif;
+}
+
+aside {
+    position: relative; /* Necessary for absolute positioning of the pseudo-element */
+    flex: 1;
+    background: linear-gradient(to bottom right, #f4f4f4, #e0e0e0);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 1; /* Ensure content appears above the pseudo-element */
+}
+
+aside::before {
+    content: '';
+    position: absolute;
+    top: 0px; /* Adjust to match border thickness */
+    left: 0px; /* Adjust to match border thickness */
+    right: 0px; /* Adjust to match border thickness */
+    bottom: 0px; /* Adjust to match border thickness */
+    z-index: -1;
+    border-radius: 12px; /* Match the rounding of the aside */
+    background: linear-gradient(to top right, white, rgb(193, 130, 14));
+    z-index: -1; /* Send the gradient behind the aside content */
+}
+
+
+
+aside h2 {
+    font-size: 1.5em;
+}
+
+aside ul {
+    padding: 0;
+}
+
+aside ul li {
+    margin-bottom: 10px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+    position: relative;
+}
+
+/* For Table  */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+}
+
+
+th {
+    background-color: rgb(249, 174, 35);
+    color: #fff;
+}
+
+td img {
+    width: 100px; 
+    height: auto;
+    border-radius: 5px; 
+}
+
+.LengthNumbers {
+    font-family: 'NormalFont', Arial, sans-serif;
+    font-weight: bold;          
+}
+
+
+
+/* Start of login page */
+
+/* Set the black background for the whole page */
+body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #fff; /* White text color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full height of the viewport */
+}
+
+/* Style for the signup container */
+.signup-container, .login-container {
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    padding: 30px;
+    border-radius: 15px; /* Rounded corners */
+    width: 100%;
+    max-width: 400px; /* Set a maximum width for the container */
+    text-align: center;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle border for the container */
+}
+
+/* Style for the header (Sign Up title) */
+#signupHeader {
+    font-size: 2.5em; /* Larger font size */
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Style for the input fields */
+input[type="text"], input[type="password"], input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0; /* Add space between input fields */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.2); /* Slight transparent background */
+    color: #fff;
+    font-size: 1em;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus {
+    outline: none;
+    border-color: #ff6a00; /* Change border color on focus */
+}
+
+/* Style for the submit button */
+button[type="submit"] {
+    background-color: #ff6a00; /* Orange color */
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Make the button take full width */
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff4500; /* Darker orange on hover */
+}
+
+/* Style for the additional button (Login page redirect) */
+button {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #ff6a00;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #ff6a00;
+    color: #000;
+}
+
+/* Make sure everything fits nicely within the container */
+form {
+    margin: 0;
+}
+
+/* end of login page */
+
+/*start of forgot password*/
+/* Style for the forgot password container */
+.forgot-password-container {
+    background-color: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    padding: 30px;
+    border-radius: 15px; /* Rounded corners */
+    width: 100%;
+    max-width: 400px; /* Set a maximum width for the container */
+    text-align: center;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+    border: 2px solid rgba(255, 255, 255, 0.2); /* Subtle border for the container */
+}
+
+/* Style for the header (Forgot Password title) */
+#forgotPasswordHeader {
+    font-size: 2.5em; /* Larger font size */
+    font-weight: bold;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+/* Style for the input fields */
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0; /* Add space between input fields */
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.2); /* Slight transparent background */
+    color: #fff;
+    font-size: 1em;
+}
+
+input[type="email"]:focus {
+    outline: none;
+    border-color: #ff6a00; /* Change border color on focus */
+}
+
+/* Style for the submit button */
+button[type="submit"] {
+    background-color: #ff6a00; /* Orange color */
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%; /* Make the button take full width */
+    font-size: 1.1em;
+    margin-top: 10px;
+}
+
+button[type="submit"]:hover {
+    background-color: #ff4500; /* Darker orange on hover */
+}
+
+/* Style for the back to login button */
+button {
+    background-color: transparent;
+    color: #fff;
+    border: 2px solid #ff6a00;
+    padding: 10px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+button:hover {
+    background-color: #ff6a00;
+    color: #000;
+}
+
+/* Make sure everything fits nicely within the container */
+form {
+    margin: 0;
+}
+
+
+/* end of forgot password */
+
+/* Default styling for paragraphs */
+.highlight {
+    color: white; /* default text color */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* Styling for when hovering over the paragraph */
+.highlight:hover {
+    color: #ff4500; /* Text color turns white */
+
+}
+
+/* Media Queries for Mobile Devices */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+
+    article {
+        padding-right: 0;
+    }
+
+    footer {
+        position: static; 
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        color: #000;
+        background: #fff;
+    }
+
+    nav, footer {
+        display: none;
+    }
+
+    main {
+        display: block; 
+    }
+
+    aside {
+        border: none; 
+        box-shadow: none; 
+    }
+}
